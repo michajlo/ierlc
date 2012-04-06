@@ -6,11 +6,9 @@ init([]) ->
     {ok, nil}.
 
 handle_event({_, privmsg, ["#" ++ Room, Msg]}, State) ->
-    io:format("Got room message~n"),
     irc:msg(["#"|Room], Msg),
     {ok, State};
 handle_event({{Nick, _}, privmsg, [_, Msg]}, State) ->
-    io:format("got direct message~n"),
     irc:msg(Nick, Msg),
     {ok, State};
 handle_event(Any, State) ->
