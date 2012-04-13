@@ -41,7 +41,7 @@ handle_cast(stop, State) ->
 
 handle_info({tcp, _FSock, RawMsg}, State=#state{sock=Sock}) ->
     case irc_parser:parse_msg(RawMsg) of
-        {_, ping, [Txt]} -> gen_tcp:send(Sock, [<<"PONG :">>, Txt]);
+        {_, ping, [Txt]} -> gen_tcp:send(Sock, [<<"PONG :">>, Txt, <<"\r\n">>]);
         ParsedMsg -> irc_event_manager:broadcast(ParsedMsg)
     end,
     {noreply, State}.
