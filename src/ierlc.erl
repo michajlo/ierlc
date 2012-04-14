@@ -1,11 +1,10 @@
 -module(ierlc).
 
--export([start_app/0]).
+-export([start/0]).
 
 -export([start/2]).
 
-start_app() ->
-    application:start(sasl),
+start() ->
     application:start(ierlc).
 
 start(_Type, _Args) ->
