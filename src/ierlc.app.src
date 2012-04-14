@@ -14,8 +14,7 @@
         ]},
      {applications, [
             kernel,
-            stdlib,
-            sasl
+            stdlib
         ]},
      {mod, {ierlc, []}},
      {env, [
