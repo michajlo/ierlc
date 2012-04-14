@@ -1,6 +1,6 @@
 {application, ierlc, 
     [{description, "IRC Bot Monster"},
-     {vsn, git},
+     {vsn, "git"},
      {modules, [
             irc_session,
             irc_event_manager,
