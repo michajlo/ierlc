@@ -5,7 +5,9 @@
             irc_session,
             irc_event_manager,
             irc_parser,
-            irc_core_sup
+            irc_core_sup,
+            ierlc,
+            ierlc_app
         ]},
      {registered, [
             irc_session,
@@ -16,7 +18,7 @@
             kernel,
             stdlib
         ]},
-     {mod, {ierlc, []}},
+     {mod, {ierlc_app, []}},
      {env, [
             {host, "localhost"},
             {port, 6667},
