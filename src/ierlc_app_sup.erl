@@ -1,4 +1,4 @@
--module(irc_core_sup).
+-module(ierlc_app_sup).
 
 -behaviour(supervisor).
 

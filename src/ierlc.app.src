@@ -5,14 +5,14 @@
             irc_session,
             irc_event_manager,
             irc_parser,
-            irc_core_sup,
+            ierlc_app_sup,
             ierlc,
             ierlc_app
         ]},
      {registered, [
             irc_session,
             irc_event_manager,
-            irc_core_sup
+            iercl_app_sup
         ]},
      {applications, [
             kernel,
